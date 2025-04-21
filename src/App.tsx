@@ -1,7 +1,13 @@
-function App() {
-  // const [count, setCount] = useState(0);
+import React from "react";
+import { Box } from "@chakra-ui/react";
+import { HeroSection } from "./components/HeroSection";
 
-  return <></>;
+function App() {
+  return (
+    <Box minH="100vh">
+      <HeroSection />
+    </Box>
+  );
 }
 
 export default App;

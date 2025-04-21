@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 import { useBreakpointValue } from "@chakra-ui/react";
 import { BlockSkills } from "../components/BlockSkills";
 import { CLBCalculator } from "../components/CLBCalculator";
+import { HeroSection } from "../components/HeroSection";
 
 const HomePage: React.FC = () => {
   const [boxLoaded, setBoxLoaded] = useState(false);
 
-  const headingSize = useBreakpointValue({ base: '2.5rem', md: '3.5rem' });
-
+  const headingSize = useBreakpointValue({ base: "2.5rem", md: "3.5rem" });
 
   const handleBoxLoad = () => {
     setBoxLoaded(true);
@@ -26,6 +26,7 @@ const HomePage: React.FC = () => {
         transition={{ duration: 1, ease: "easeInOut" }}
         onAnimationComplete={handleBoxLoad}
       >
+        <HeroSection />
         <BlockSkills />
         <CLBCalculator />
       </motion.div>
