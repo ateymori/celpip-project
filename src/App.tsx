@@ -1,12 +1,23 @@
 import React from "react";
-import { Box } from "@chakra-ui/react";
+import { Box, ChakraProvider } from "@chakra-ui/react";
 import { HeroSection } from "./components/HeroSection";
+import { ColorModeToggle } from "./components/ColorModeToggle";
+import theme from "./theme";
 
 function App() {
   return (
-    <Box minH="100vh">
-      <HeroSection />
-    </Box>
+    <ChakraProvider theme={theme}>
+      <Box minH="100vh">
+        <ColorModeToggle
+          position="fixed"
+          top="20px"
+          right="20px"
+          zIndex={1000}
+          size="lg"
+        />
+        <HeroSection />
+      </Box>
+    </ChakraProvider>
   );
 }
 
